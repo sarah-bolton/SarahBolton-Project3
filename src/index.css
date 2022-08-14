@@ -253,22 +253,123 @@ html {
   overflow: hidden;
 }
 
-.photos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  margin: 20px 5%;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.App {
+  background-color: rgb(234, 234, 234);
+  margin: 0 auto;
 }
 
-.photo-container {
+h1,
+h2,
+button,
+input,
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  width: 60%;
   display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+form {
+  margin-top: 23px;
+}
+
+input {
+  width: 350px;
+  height: 35px;
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 5px;
+  padding-left: 12px;
+}
+
+button {
+  width: 110px;
+  height: 35px;
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 5px;
+  margin-left: 10px;
+  background-color: rgb(141, 82, 101);
+  color: white;
+  text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  height: 100%;
+  background-color: rgb(234, 234, 234);
+}
+
+.photos {
+  margin: 40px auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(50px, auto);
+  width: 60%;
   justify-content: center;
-  padding: 18px;
-  background: white;
+  /* margin: 0 auto; */
+}
+
+.photo-container:nth-child(5n) {
+  grid-column-end: span 2;
 }
 
 img {
-  display: block;
-  max-width: 100%;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+.bgimg {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #000;
+  border-color: #000 transparent #000 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+footer p {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(94, 94, 94);
+  color: #fff;
+  border: 1px solid rgb(175, 175, 175);
+  font-size: 14px;
+}
+
+/* loading animation from https://loading.io/css/ */

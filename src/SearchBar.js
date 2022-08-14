@@ -1,16 +1,10 @@
-// import './App.css';
 import { useState } from 'react';
 
 function SearchBar(props) {
     const [query, setQuery] = useState("");
-    // console.log(query)
-
-    // const searchBar = async (e) => {
-    //     e.preventDefault();
-    //     console.log("Submitting the Form")
-    // };
 
     return (
+        // once the user has pressed enter or the search button, it will then allow all pictures to render to the page
         <form className="form" onSubmit={
             (e) => { props.getPhotos(e, query) }
         }>
@@ -21,7 +15,7 @@ function SearchBar(props) {
                 type="text"
                 name="query"
                 className="input"
-                placeholder={`Try "tech" or "kittens"`}
+                placeholder={`Search for hi-res pictures here!`}
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
             />
