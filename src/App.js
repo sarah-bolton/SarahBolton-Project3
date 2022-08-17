@@ -14,9 +14,11 @@ function App() {
     setQuery(searchquery);
     if (allPhotos.length === 0) {
       setError('No images matching your search, please try again');
+      // } else {
+      //   setError(false);
+      // }
     }
   }
-
   // useEffect to get API data for search bar
   useEffect(() => {
     if (query) {
@@ -49,7 +51,7 @@ function App() {
         <DisplayPhotos photos={allPhotos} error={error} />
       </div>
       <footer>
-        <p>Made by Sarah at Juno College</p>
+        <p>Made by Sarah at&nbsp;<a href="https://junocollege.com/" alt="Juno College">Juno College </a></p>
       </footer>
     </div>
 

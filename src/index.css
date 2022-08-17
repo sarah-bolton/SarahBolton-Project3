@@ -298,6 +298,7 @@ button {
   color: white;
   text-transform: uppercase;
   align-items: center;
+  cursor: pointer;
 }
 
 .container {
@@ -372,7 +373,16 @@ footer p {
   background-color: rgb(94, 94, 94);
   color: #fff;
   border: 1px solid rgb(175, 175, 175);
-  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: rgb(186, 179, 121);
 }
 
 @media (max-width: 1050px) {
