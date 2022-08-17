@@ -14,10 +14,13 @@ function SearchBar(props) {
             <input
                 type="text"
                 name="query"
+                aria-label='Enter your search term'
                 className="input"
-                placeholder={`Search for hi-res pictures here!`}
-                value={query}
+                placeholder={`Search for pics here!`}
+                value={query || ''}
+                spellCheck={true}
                 onChange={(e) => setQuery(e.target.value)}
+                required
             />
             <button type="submit" className="button">
                 Search

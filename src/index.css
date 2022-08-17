@@ -285,6 +285,7 @@ input {
   border: 1px solid rgb(175, 175, 175);
   border-radius: 5px;
   padding-left: 12px;
+  background-color: rgb(254, 247, 247);
 }
 
 button {
@@ -296,6 +297,7 @@ button {
   background-color: rgb(141, 82, 101);
   color: white;
   text-transform: uppercase;
+  align-items: center;
 }
 
 .container {
@@ -314,7 +316,7 @@ button {
   grid-auto-rows: minmax(50px, auto);
   width: 60%;
   justify-content: center;
-  /* margin: 0 auto; */
+  overflow: 'auto';
 }
 
 .photo-container:nth-child(5n) {
@@ -333,18 +335,17 @@ img {
   width: 100%;
 }
 
-.lds-dual-ring {
-  display: inline-block;
+/* .lds-dual-ring {
   width: 80px;
   height: 80px;
+  margin: 0 auto;
 }
 
 .lds-dual-ring:after {
   content: " ";
   display: block;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: 6px solid #000;
   border-color: #000 transparent #000 transparent;
@@ -359,7 +360,9 @@ img {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
+
+/* loading animation from https://loading.io/css/ */
 
 footer p {
   display: flex;
@@ -372,4 +375,34 @@ footer p {
   font-size: 14px;
 }
 
-/* loading animation from https://loading.io/css/ */
+@media (max-width: 1050px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  input {
+    display: flex;
+    margin: 0 auto;
+    /* width: 100%; */
+  }
+
+  button {
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+  }
+
+  .photos {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  input {
+    width: 100%;
+  }
+}
